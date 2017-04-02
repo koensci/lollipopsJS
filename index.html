@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      
+    </head>
+    
+    <body>
+        <canvas id="proteinGraphic" class="col-xs-12" width="4000px" height="900px">
+        </canvas>
+        
+        <script src="lollipops.js"></script>
+        
+        <script>
+            lollipopsJS.drawProtein("proteinGraphic", "P00533", ["S768I", "V769L"], ["red", "black"]);
+        </script>
+    </body>
+</html>
