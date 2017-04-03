@@ -1,5 +1,5 @@
 var lollipopsJS = {
-	painter: document.getElementById("proteinGraphic").getContext("2d"),
+	painter: [],
 	proteinSize: "",
 	xCoordLabels: [],
 
@@ -19,7 +19,11 @@ var lollipopsJS = {
 	},
 
 	prepareCanvas: function () {
-		//Draws backbone
+		//Clears canvas
+        var canvas = this.painter.canvas;
+        this.painter.clearRect(0, 0, canvas.width, canvas.height);
+        
+        //Draws backbone
 		this.resetPainter();
 		this.painter.fillStyle = "#BABDB6";
 		this.painter.fillRect(250, 300, 3500, 100);
@@ -62,7 +66,7 @@ var lollipopsJS = {
 
 			for (var k in this.xCoordLabels) {
 				var distance = position - this.xCoordLabels[k];
-				if (distance > 0 && distance < proteinSize / 48) {
+				if (distance > 0 && distance < proteinSize / 40) {
 					draw = false;
 				}
 			}
