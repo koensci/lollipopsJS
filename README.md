@@ -12,6 +12,7 @@ Add the [lollipops.js](lollipops.js) file to your project. No dependencies neede
 Draw with ```lollipopsJS.drawProtein()```. It requires the HTML canvas tag ID, the protein's Uniprot Accession 
 number, an array of amino acid changes, and an array of corresponding lollipop colors.
 
+![EGFR](EGFR.png?raw=true)
 This [example diagram](http://cdn.rawgit.com/koensci/lollipopsJS/master/index.html) of an EGFR is generated as follows:
 
 ```
