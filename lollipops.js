@@ -181,12 +181,12 @@ var lollipopsJS = {
             url: "https://script.google.com/macros/s/AKfycbwZvdsqhemoQF2A7NENBC95urjOWwCoCSaY1ZXh9pCSvlHM1HM/exec?url=http://pfam.xfam.org/protein/" + uniProtAcc + "/graphic",
             datatype: "txt",
             success: function(response) {
-                var model = JSON.parse(JSON.parse(response).results[0]);
+                var model = JSON.parse(response)[0];
 
-                proteinSize = model[0].length;
+                proteinSize = model.length;
                 lollipopsJS.drawXAxisLabel(proteinSize);
 
-                var domains = model[0].regions;
+                var domains = model.regions;
 
                 //Draws domains
                 for (var i in domains) {
